@@ -1,0 +1,46 @@
+<?php
+use Adeelq\AbandonedCartReminder\Block\Adminhtml\CartItems;
+use Magento\Quote\Model\Quote\Item;
+/** @var $block CartItems */
+?>
+<?php if ($cart = $block->getCart()) : ?>
+    <table class="email-items">
+        <thead>
+            <tr>
+                <th class="item-info">
+                    <?= $block->escaper->escapeHtml(__('Items')) ?>
+                </th>
+                <th class="item-qty">
+                    <?= $block->escaper->escapeHtml(__('Qty')) ?>
+                </th>
+                <th class="item-price">
+                    <?= $block->escaper->escapeHtml(__('Price')) ?>
+                </th>
+            </tr>
+        </thead>
+        <?php /** @var $item Item */ ?>
+        <tbody>
+            <?php foreach ($cart->getAllItems() as $item) : ?>
+                <?php if (! $item->getParentItem()) : ?>
+                    <tr>
+                        <td class="item-info">
+                            <p class="product-name">
+                                <?= $block->escaper->escapeHtml($item->getName()) ?>
+                            </p>
+                            <p class="sku">
+                                <?= $block->escaper->escapeHtml(__('SKU')) ?>: <?= $block->escaper->escapeHtml($item->getSku()) ?>
+                            </p>
+                            <?= $block->escaper->escapeHtml($item->getDescription()) ?>
+                        </td>
+                        <td class="item-qty">
+                            <?= (float) $item->getQty() ?>
+                        </td>
+                        <td class="item-price">
+                            <?= /* @noEscape */ $block->getItemPrice($item) ?>
+                        </td>
+                    </tr>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+<?php endif; ?>

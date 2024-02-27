@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="adeelq" translate="label" sortOrder="10">
+            <label>AdeelQ</label>
+        </tab>
+        <section id="adeelq_abandoned_configuration" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Abandoned Carts - Configuration</label>
+            <tab>adeelq</tab>
+            <resource>Adeelq_AbandonedCartReminder::AbandonedCartReminder</resource>
+            <group id="abandoned_cart" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Abandoned Cart</label>
+                <attribute type="expanded">1</attribute>
+                <field id="duration" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Abandoned After</label>
+                    <source_model>Adeelq\AbandonedCartReminder\Model\Adminhtml\Config\Source\System\CartAbandonmentDuration</source_model>
+                    <comment><![CDATA[Send reminder email after a cart has been inactive for selected amount of time.]]></comment>
+                </field>
+                <field id="consented" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send If Consented?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Select <strong>No</strong> to send reminder to all emails irrelevant to consent. <strong>Yes</strong> option checks if shopping cart email has Subscribed consent in Newsletter Subscriber. ]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+            id="Adeelq_AbandonedCartReminder::AbandonedCartReminder"
+            title="Abandoned Carts: Reminder Logs"
+            module="Adeelq_AbandonedCartReminder"
+            sortOrder="100"
+            action="adeelq_abandoned/abandoned"
+            resource="Adeelq_AbandonedCartReminder::AbandonedCartReminder"
+            parent="Adeelq_CoreModule::Reports"
+        />
+    </menu>
+</config>

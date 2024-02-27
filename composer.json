@@ -1,0 +1,36 @@
+{
+    "name": "adeelq/magento2-abandoned-cart-reminder",
+    "description": "A module which sends reminder email to customer upon cart abandonment after certain time (configurable) has passed.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "MPL-2.0",
+    "authors": [
+        {
+            "name": "Adeel Qamar",
+            "email": "adeel1qamar@gmail.com"
+        }
+    ],
+    "require": {
+        "adeelq/magento2-core-module": ">=1.0",
+        "magento/framework": ">=101 <104",
+        "magento/module-sales": ">=100 <104",
+        "magento/module-store": ">=100 <102",
+        "magento/module-config": ">=100 <103",
+        "magento/module-customer": ">=100 <104",
+        "magento/module-quote": ">=100 <103"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Adeelq\\AbandonedCartReminder\\": ""
+        }
+    }
+}

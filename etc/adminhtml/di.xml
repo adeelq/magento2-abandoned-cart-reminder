@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Adeelq\AbandonedCartReminder\Ui\Model\ResourceModel\Abandoned\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">adeelq_abandoned_cart_reminder</argument>
+            <argument name="resourceModel" xsi:type="string">
+                Adeelq\AbandonedCartReminder\Model\ResourceModel\AbandonedResource
+            </argument>
+        </arguments>
+    </virtualType>
+</config>

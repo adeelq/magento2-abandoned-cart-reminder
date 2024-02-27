@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <adeelq_abandoned_configuration>
+            <abandoned_cart>
+                <duration>60</duration>
+                <consented>1</consented>
+            </abandoned_cart>
+        </adeelq_abandoned_configuration>
+    </default>
+</config>
