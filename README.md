@@ -1,7 +1,7 @@
 Magento 2 - Abandoned Cart Reminder
  ======
  
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](../CoreConfigDataViewer/LICENSE)
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](LICENSE)
 
 A module which sends reminder email to customer upon cart abandonment after certain time has passed. User can configure cart abandonment duration in the module configuration as well as view the logs for reminder emails sent in the provided grid in REPORTS menu.
 
