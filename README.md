@@ -39,7 +39,10 @@ If you do not use composer, ensure that you also load any dependencies that this
 ### Grid page
 ![list.jpeg](list.jpeg)
 
-### Example abandoned cart reminder email
+### Edit email template
+![template.jpeg](template.jpeg)
+
+### Sample abandoned cart reminder email
 ![email_example.jpeg](email_example.jpeg)
 
 ## 
