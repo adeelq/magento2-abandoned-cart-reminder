@@ -105,7 +105,9 @@ class AbandonedHelper extends Base
     {
         $this->inlineTranslation->suspend();
         $transport = $this->transportBuilder
-            ->setTemplateIdentifier('aq_abandoned_cart_reminder')
+            ->setTemplateIdentifier(
+                $store->getConfig('adeelq_abandoned_configuration/abandoned_cart/template')
+            )
             ->setTemplateOptions(
                 [
                     'area' => Area::AREA_FRONTEND,

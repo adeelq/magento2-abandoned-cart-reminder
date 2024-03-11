@@ -5,6 +5,7 @@
             <abandoned_cart>
                 <duration>60</duration>
                 <consented>1</consented>
+                <template>adeelq_abandoned_configuration_abandoned_cart_template</template>
             </abandoned_cart>
         </adeelq_abandoned_configuration>
     </default>
