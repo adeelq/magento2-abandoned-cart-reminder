@@ -41,3 +41,5 @@ If you do not use composer, ensure that you also load any dependencies that this
 
 ### Example abandoned cart reminder email
 ![email_example.jpeg](email_example.jpeg)
+
+## 
