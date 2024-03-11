@@ -45,4 +45,6 @@ If you do not use composer, ensure that you also load any dependencies that this
 ### Sample abandoned cart reminder email
 ![email_example.jpeg](email_example.jpeg)
 
-## 
+## Documents
+
+Download [user guide](guide.pdf) for offline viewing.
