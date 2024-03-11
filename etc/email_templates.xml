@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
     <template
         id="adeelq_abandoned_configuration_abandoned_cart_template"
-        label="AQ Abandoned Carts: Reminder Email"
+        label="Abandoned Cart Reminder"
         file="abandoned_cart_reminder.html"
         type="html"
         module="Adeelq_AbandonedCartReminder"

@@ -17,6 +17,6 @@ class Index extends AbstractIndex
      */
     protected function getLabelTitle(): string
     {
-        return 'Abandoned Carts: Reminder Logs';
+        return 'Abandoned Cart Reminder: Email Logs';
     }
 }
