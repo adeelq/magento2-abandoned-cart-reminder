@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+  <table name="adeelq_abandoned_cart_reminder" resource="default" engine="innodb" comment="AdeelQ Abandoned Cart entity table">
+    <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" comment="Primary Key"/>
+    <column xsi:type="smallint" name="store_id" padding="5" unsigned="true" nullable="false" identity="false" comment="Store Id"/>
+    <column xsi:type="int" name="quote_id" padding="10" unsigned="true" nullable="false" identity="false" comment="Quote Id"/>
+    <column xsi:type="int" name="customer_id" padding="10" unsigned="true" nullable="true" identity="false" comment="Customer Id"/>
+    <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Email"/>
+    <column xsi:type="smallint" name="email_sent" padding="6" unsigned="false" nullable="false" identity="false" default="0" comment="Email Sent?"/>
+    <column xsi:type="timestamp" name="created_at" on_update="false" nullable="true" comment="Created At"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="id"/>
+    </constraint>
+    <constraint xsi:type="foreign" referenceId="ADEELQ_ABANDONED_CART_REMINDER_STORE_ID_STORE_STORE_ID" table="adeelq_abandoned_cart_reminder" column="store_id" referenceTable="store" referenceColumn="store_id" onDelete="CASCADE"/>
+    <constraint xsi:type="foreign" referenceId="ADEELQ_ABANDONED_CART_REMINDER_QUOTE_ID_QUOTE_ENTITY_ID" table="adeelq_abandoned_cart_reminder" column="quote_id" referenceTable="quote" referenceColumn="entity_id" onDelete="CASCADE"/>
+    <index referenceId="ADEELQ_ABANDONED_CART_REMINDER_STORE_ID" indexType="btree">
+      <column name="store_id"/>
+    </index>
+    <index referenceId="ADEELQ_ABANDONED_CART_REMINDER_QUOTE_ID" indexType="btree">
+      <column name="quote_id"/>
+    </index>
+    <index referenceId="ADEELQ_ABANDONED_CART_REMINDER_CUSTOMER_ID" indexType="btree">
+      <column name="customer_id"/>
+    </index>
+    <index referenceId="ADEELQ_ABANDONED_CART_REMINDER_EMAIL" indexType="btree">
+      <column name="email"/>
+    </index>
+    <index referenceId="ADEELQ_ABANDONED_CART_REMINDER_EMAIL_SENT" indexType="btree">
+      <column name="email_sent"/>
+    </index>
+    <index referenceId="ADEELQ_ABANDONED_CART_REMINDER_CREATED_AT" indexType="btree">
+      <column name="created_at"/>
+    </index>
+  </table>
+</schema>
