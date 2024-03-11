@@ -7,9 +7,9 @@
         </tab>
         <section id="adeelq_abandoned_configuration" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
-            <label>Abandoned Carts - Configuration</label>
+            <label>Abandoned Cart Reminder: Configuration</label>
             <tab>adeelq</tab>
-            <resource>Adeelq_AbandonedCartReminder::AbandonedCartReminder</resource>
+            <resource>Adeelq_AbandonedCartReminder::Config</resource>
             <group id="abandoned_cart" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Abandoned Cart</label>
                 <attribute type="expanded">1</attribute>

@@ -3,7 +3,7 @@
     <menu>
         <add
             id="Adeelq_AbandonedCartReminder::AbandonedCartReminder"
-            title="Abandoned Carts: Reminder Logs"
+            title="Abandoned Cart Reminder: Email Logs"
             module="Adeelq_AbandonedCartReminder"
             sortOrder="100"
             action="adeelq_abandoned/abandoned"
